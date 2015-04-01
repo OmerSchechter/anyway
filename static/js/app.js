@@ -302,7 +302,7 @@ $(function() {
 
             _.each(this.oms.markersNearAnyOtherMarker(), function(marker){
                 marker.icon = MULTIPLE_ICONS[groupsSeverities[marker.view.model.get("groupID") -1]];
-            }.bind(this));
+            });
         },
         downloadCsv: function() {
             if (this.markers.length > 0) {
