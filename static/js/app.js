@@ -279,6 +279,10 @@ $(function() {
             var groupsSeverities = [];
 
             _.each(this.oms.markersNearAnyOtherMarker(), function(marker) {
+                marker.view.model.unset("groupID");
+            });
+
+            _.each(this.oms.markersNearAnyOtherMarker(), function(marker) {
                 marker.title = 'מספר תאונות בנקודה זו';
                 var groupHead = marker.view.model;
                 if(!groupHead.get("groupID")){
