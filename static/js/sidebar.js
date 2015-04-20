@@ -95,6 +95,8 @@ var SidebarView = Backbone.View.extend({
                     continue;
                 }
 
+                console.log('mobile var content in sidebar.js: ' + mobile);
+
                 var entryHtml = this.sidebarItemTemplate({
                     created: moment(markerModel.get("created")).format("LLLL"),
                     type: SUBTYPE_STRING[markerModel.get("subtype")],
