@@ -196,7 +196,11 @@ var MarkerView = Backbone.View.extend({
     opacitySeverityForGroup : function() {
         var group = this.model.get("groupID") -1;
         // this.marker.icon = MULTIPLE_ICONS[app.groupsData[group].severity];
-        this.marker.setIcon( MULTIPLE_ICONS[app.groupsData[group].severity] );
+        var googleIcon =  {
+            url: MULTIPLE_ICONS[app.groupsData[group].severity],
+            scaledSize: new google.maps.Size(60, 82)
+        };
+        this.marker.setIcon( googleIcon );
         if (app.groupsData[group].opacity != 'opaque'){
             this.marker.opacity = INACCURATE_MARKER_OPACITY / app.groupsData[group].opacity;
         }
