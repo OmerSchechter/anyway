@@ -14,8 +14,23 @@ div.gm-style {
     font-family: 'Alef', 'sans-serif';
 }
 
+.navbar-inner > div{
+    display: none;
+}
+
+.brand{
+    float: none !important;
+    text-align: center !important;
+      padding: 34px 20px 10px !important;
+}
+
+.brand > img{
+      height: 40px !important;
+}
+
 .main{
     padding-right: 0px !important;
+    padding-top: 84px !important;
 }
 
 .context-menu {

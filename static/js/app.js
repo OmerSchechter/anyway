@@ -345,7 +345,7 @@ $(function() {
             this.defaultLocation = new google.maps.LatLng(INIT_LAT, INIT_LON);
 
             if (mobile){
-                INIT_ZOOM = 19;
+                INIT_ZOOM = 18;
             }
 
             var mapOptions = {
