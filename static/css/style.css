@@ -14,23 +14,45 @@ div.gm-style {
     font-family: 'Alef', 'sans-serif';
 }
 
-.navbar-inner > div{
+#navbar-inner-content{
     display: none;
 }
 
 .brand{
     float: none !important;
     text-align: center !important;
-      padding: 34px 20px 10px !important;
+    padding: 35px 20px 35px !important;
 }
 
 .brand > img{
-      height: 40px !important;
+      height: 60px !important;
+}
+
+#sidemenu-button{
+    /*float: left;*/
+    position: absolute;
+    top: 25px;
+    right: 15px;
+    width: 50px;
+    height: 42px;
+    background: linear-gradient(#FFF,#DDD);
+    border: #AAA 1px solid;
+    border-radius: 2px;
+    padding: 18px 29px;
+    z-index: 1035;
+
+}
+#sidemenu-button > div{
+    width: 51px;
+    height: 11px;
+    background: #3A9BBE;
+    margin: 3px 0px;
+    border-radius: 4px;
 }
 
 .main{
     padding-right: 0px !important;
-    padding-top: 84px !important;
+    padding-top: 130px !important;
 }
 
 .context-menu {

@@ -18,7 +18,7 @@
 
           <div class="navbar navbar-fixed-top">
                 <div class="navbar-inner" style="padding-right: 10px{{ '; display: none' if map_only }}">
-                    <div style="float: left; padding: 5px">
+                    <div id="navbar-inner-content" style="float: left; padding: 5px">
                         <a id="js-embed-link" class="btn" style="height: 10px; line-height: 10px; vertical-align: top" data-toggle="modal" data-target="#embed">צרו קישור</a>
 
                         <a class="fb-login" style="cursor: pointer"><img src="/static/img/facebook_login.png" style="padding: 3px" />
@@ -37,8 +37,13 @@
                         </div>
                     </div>
 
-                    <a class="brand" href="/"> beta <img src="/static/img/anyway.png" style="height: 26px">
+                    <a class="brand" href="#"> beta <img src="/static/img/anyway.png" style="height: 26px">
                 </a>
+                    <div id="sidemenu-button">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
                 </div>
             </div>
             <div class="main" style="position: fixed; width: 100%; height: 100%; box-sizing: border-box{{ '; padding-top: 40px; padding-right: 250px' if not map_only }}">
