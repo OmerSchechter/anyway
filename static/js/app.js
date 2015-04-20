@@ -95,7 +95,7 @@ function getIcon(accidentType, severity) {
     if (mobile){
         var googleIcon = {
             url: icon,
-            size: new google.maps.Size(10, 12)
+            scaledSize: new google.maps.Size(60, 82)
         };
         icon = googleIcon;
         window.icon = icon;
