@@ -1,4 +1,16 @@
 $(function () {
+
+    var mobile = window.screen.width <= 480;
+
+    // if (mobile){
+    //     var googleIcon = {
+    //         url: icon,
+    //         size: new google.maps.Size(50, 52)
+    //     };
+    //     icon = googleIcon;
+    //     window.icon = icon;
+    // }
+
     var AppRouter = Backbone.Router.extend({
         routes: {
             "": "navigateEmpty",
@@ -259,8 +271,6 @@ $(function () {
             this.isReady = false;
 
             this.defaultLocation = new google.maps.LatLng(INIT_LAT, INIT_LON);
-
-            var mobile = window.screen.width <= 480;
 
             if (mobile){
                 INIT_ZOOM = 19;
