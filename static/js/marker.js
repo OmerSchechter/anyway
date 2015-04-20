@@ -189,12 +189,14 @@ var MarkerView = Backbone.View.extend({
 		});
 	},
     resetOpacitySeverity : function() {
-        this.marker.icon = this.getIcon();
+        // this.marker.icon = this.getIcon();
+        this.marker.setIcon( this.getIcon() );
         this.marker.opacity = this.model.get("locationAccuracy") == 1 ? 1.0 : INACCURATE_MARKER_OPACITY;
     },
     opacitySeverityForGroup : function() {
         var group = this.model.get("groupID") -1;
-        this.marker.icon = MULTIPLE_ICONS[app.groupsData[group].severity];
+        // this.marker.icon = MULTIPLE_ICONS[app.groupsData[group].severity];
+        this.marker.setIcon( MULTIPLE_ICONS[app.groupsData[group].severity] );
         if (app.groupsData[group].opacity != 'opaque'){
             this.marker.opacity = INACCURATE_MARKER_OPACITY / app.groupsData[group].opacity;
         }

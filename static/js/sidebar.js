@@ -92,6 +92,8 @@ var SidebarView = Backbone.View.extend({
             if (bounds.contains(marker.getPosition()) ){
                 var markerModel = markerView.model;
 
+                console.log('mobile var content in sidebar.js: ' + mobile);
+
                 var entryHtml = this.sidebarItemTemplate({
                     created: moment(markerModel.get("created")).format("LLLL"),
                     type: SUBTYPE_STRING[markerModel.get("subtype") - 1],
