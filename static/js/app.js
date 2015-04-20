@@ -332,6 +332,12 @@ $(function() {
 
             this.defaultLocation = new google.maps.LatLng(INIT_LAT, INIT_LON);
 
+            var mobile = window.screen.width <= 480;
+
+            if (mobile){
+                INIT_ZOOM = 19;
+            }
+
             var mapOptions = {
                 center: this.defaultLocation,
                 zoom: INIT_ZOOM,
