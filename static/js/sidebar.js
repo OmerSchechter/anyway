@@ -97,11 +97,28 @@ var SidebarView = Backbone.View.extend({
 
                 console.log('mobile var content in sidebar.js: ' + mobile);
 
+// was conflict
                 var entryHtml = this.sidebarItemTemplate({
                     created: moment(markerModel.get("created")).format("LLLL"),
                     type: SUBTYPE_STRING[markerModel.get("subtype")],
                     icon: markerView.getIcon()
                 });
+                
+                if (mobile){
+                    var entryHtml = this.sidebarItemTemplate({
+                        created: moment(markerModel.get("created")).format("LLLL"),
+                        type: SUBTYPE_STRING[markerModel.get("subtype")],
+                        icon: markerView.getIcon().url
+                    });
+                } else {
+                    var entryHtml = this.sidebarItemTemplate({
+                        created: moment(markerModel.get("created")).format("LLLL"),
+                        type: SUBTYPE_STRING[markerModel.get("subtype")],
+                        icon: markerView.getIcon()
+                    });
+                }
+
+// end conflict
 
                 var $entry = $(entryHtml);
                 $entry.data("marker", marker);
