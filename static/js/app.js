@@ -1,3 +1,5 @@
+var mobile = window.screen.width <= 480;
+
 var ADD_MARKER_OFFER = "הוסף הצעה";
 var ADD_MARKER_PETITION = "הוסף עצומה";
 
@@ -89,6 +91,16 @@ function getIcon(accidentType, severity) {
     } catch (err) {
         // stick to default icon
     }
+
+    if (mobile){
+        var googleIcon = {
+            url: icon,
+            size: new google.maps.Size(50, 52)
+        };
+        icon = googleIcon;
+        window.icon = icon;
+    }
+
     return icon;
 }
 
@@ -331,8 +343,6 @@ $(function() {
             this.isReady = false;
 
             this.defaultLocation = new google.maps.LatLng(INIT_LAT, INIT_LON);
-
-            var mobile = window.screen.width <= 480;
 
             if (mobile){
                 INIT_ZOOM = 19;
