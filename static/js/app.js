@@ -421,7 +421,11 @@ $(function() {
             console.log('Loaded MarkerClusterer');
 
             this.sidebar = new SidebarView({ map: this.map }).render();
-            this.$el.find(".sidebar-container").append(this.sidebar.$el);
+            if (mobile){
+                this.$el.find("#sidr").append(this.sidebar.$el);
+            } else {
+                this.$el.find(".sidebar-container").append(this.sidebar.$el);
+            }
             console.log('Loaded SidebarView');
 
             if (!START_DATE) {
