@@ -23,6 +23,7 @@ var SidebarView = Backbone.View.extend({
     },
     render: function() {
 
+        console.log(this.$el);
         this.$el.append($("#sidebar-template").html());
         this.$currentViewList = this.$el.find(".current-view");
         var self = this;
