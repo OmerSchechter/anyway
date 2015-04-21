@@ -328,6 +328,40 @@
                 <img src="/static/img/my_location.png" />
             </div>
         </div>
+        <div id="sidebar-mobile-template" style="display: none">
+            <div class="sidebar-title">סינון לפי חומרה</div>
+            <ul>
+                <li><img class="checkbox-severity" data-type="1" data-checked="true" /> תאונות קטלניות</li>
+                <li><img class="checkbox-severity" data-type="2" data-checked="true" /> תאונות קשות</li>
+                <li><img class="checkbox-severity" data-type="3" data-checked="true" /> תאונות קלות</li>
+                <li><img class="checkbox-accuracy" data-type="4" data-checked="false" /> תאונות שמיקומן משוער</li>
+
+            </ul>
+            <div class="sidebar-title">סינון לפי זמן</div>
+            <ul>
+                <li>
+                    <div class="input-prepend" id="calendar-control">
+                        <span class="add-on"><i class="icon-calendar date-range"></i></span>
+                        <input type="text" class="date-range" style="width: 200px" />
+                    </div>
+
+                </li>
+
+            </ul>
+            <!-- <div style="width: 100%; display: table"> -->
+            <div style="width: 100%; display: none">
+                <div style="display: table-row">
+                    <div class="sidebar-title" style="display: table-cell">תאונות המוצגות על המפה</div>
+                    <div class="sidebar-title current-view-count" style="display: table-cell"></div>
+                </div>
+            </div>
+            <div style="overflow-y: scroll; position: absolute; top: 255px; bottom: 30px; width: 100%; display: none">
+                <ul class="current-view"></ul>
+            </div>
+            <div style="position: absolute; bottom: 0px">
+                <a class="btn download-csv">נתוני התאונות (להורדה בקובץ CSV)</a>
+            </div>
+        </div>
         <div id="sidebar-template" style="display: none">
             <div class="sidebar-title">סינון לפי חומרה</div>
             <ul id="step3tour">
