@@ -368,8 +368,13 @@ $(function () {
             this.clusterer = new MarkerClusterer(this.map, [], mcOptions);
             console.log('Loaded MarkerClusterer');
 
-            this.sidebar = new SidebarView({map: this.map}).render();
-            this.$el.find(".sidebar-container").append(this.sidebar.$el);
+            this.sidebar = new SidebarView({ map: this.map }).render();
+            if (mobile){
+                this.$el.find("#sidr").append(this.sidebar.$el);
+            } else {
+                this.$el.find(".sidebar-container").append(this.sidebar.$el);
+            }
+
             console.log('Loaded SidebarView');
 
             if (!START_DATE) {
