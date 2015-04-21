@@ -1,5 +1,13 @@
 var mobile = window.screen.width <= 480;
 
+$(document).ready(function() {
+    $('#sidr-bttn').sidr({
+        name: 'sidr', 
+          speed: 200, 
+          side: 'right'
+    });
+});
+
 var ADD_MARKER_OFFER = "הוסף הצעה";
 var ADD_MARKER_PETITION = "הוסף עצומה";
 
