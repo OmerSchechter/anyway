@@ -57,7 +57,24 @@ div.gm-style {
 }
 
 #sidr{
-    width: 360px;
+    width: 460px;
+    direction: rtl;
+    font-family: 'Alef','sans-serif';
+}
+
+#sidr .sidebar-title{
+    font-size: 45px;
+    line-height: 85px;
+}
+
+#sidr ul li{
+    font-size: 40px;
+    line-height: 80px;
+}
+
+#sidr .checkbox-severity, #sidr .checkbox-accuracy{
+    width: 55px;
+    height: 55px;
 }
 
 .main{
