@@ -3,6 +3,13 @@
     <head>
         <title>Anyway - משפיעים בכל דרך</title>
 
+        <meta property="og:site_name" content="Anyway" />
+        <meta property="og:image" content="{{ url }}/static/img/icons/vehicle_vehicle_medium@2x.png" />
+        <meta property="og:title" content="Anyway - משפיעים בכל דרך" />
+        <meta property="og:description" content="Anyway היא הדרך שלנו למנוע את התאונה הבאה. ביחד, נהגים, הולכי רגל, אזרחים ומקבלי החלטות נאבק בתאונות הדרכים." />
+        <meta property="og:url" content="{{ url }}" />
+        <meta property="og:locale" content="he_IL" />
+
         <link href='http://fonts.googleapis.com/css?family=Alef:400,700' rel='stylesheet' type='text/css'>
         {% assets filters="yui_css", output="css/app.min.css",
             "css/bootstrap.rtl.css",
@@ -20,10 +27,8 @@
           <div class="navbar navbar-fixed-top">
                 <div class="navbar-inner" style="padding-right: 10px{{ '; display: none' if map_only }}">
                     <div id="navbar-inner-content" style="float: left; padding: 5px">
-                        <a id="js-embed-link" class="btn" style="height: 10px; line-height: 10px; vertical-align: top" data-toggle="modal" data-target="#embed">צרו קישור</a>
-
-                        <a class="fb-login" style="cursor: pointer"><img src="/static/img/facebook_login.png" style="padding: 3px" />
-                        </a>
+                        <div class="fb-like" data-layout="standard" data-action="like" data-show-faces="true" data-share="true" style="vertical-align: bottom"></div>
+                        <a id="js-embed-link" class="btn" style="height: 10px; line-height: 10px; vertical-align: top" data-toggle="modal" data-target="#embed">קישור לתצוגה הנוכחית</a>
 
                         <a href="mailto:feedback.anyway@gmail.com/?subject=משוב%20על%20אתר%20anyway.co.il" target="new">צרו קשר</a> &#124;
                         <a href="" data-toggle="modal" data-target="#credit-dialog">תודות</a> &#124;
@@ -82,7 +87,7 @@
             </div>
             <div class="modal-body">
                 <div class="embed-code">
-                    <label for="map_link">קישור לאיזור המוצג</label>
+                    <label for="map_link">קישור לתצוגה הנוכחית</label>
                     <input id="map_link" type="text" class="form-control form-control-wide" value="" placeholder="">
                     <button class="btn btn-default js-btn-copytoclipboard" data-copy="map_link" style="float: left;" type="button">העתק</button>
                 </div>
@@ -200,16 +205,16 @@ ANYWAY הוא חשמביר (פרויקט) הפועל בחסות הסדנא לי�
             <p class="added-by"></p>
             <p class="creation-date"></p>
             <p class="description"></p>
-            <!--h5>תומכים</h5-->
-            <!--p class="followers"></p-->
+            <!--
+            h5>תומכים</h5
+            <p class="followers"></p>
             <div class="buttons" style="position: absolute; bottom: 0">
-                <!--
             <button class="btn btn-success follow-button">תמוך בנקודה זו</button>
             <button class="btn btn-danger unfollow-button" style="display: none">הפסק תמיכה</button>
             <button class="btn btn-primary share-button">שתף</button>
-          -->
                 <button class="btn btn-danger delete-button" style="display: none">מחק</button>
             </div>
+            -->
 
         </div>
         <div id="reset-map-control" style="padding: 5px; display: none">
@@ -295,7 +300,7 @@ ANYWAY הוא חשמביר (פרויקט) הפועל בחסות הסדנא לי�
         </script>
 
         <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBpOmft-UskZsAQth9vNl0fN6EXaRR6dZc&sensor=true&libraries=places&language=iw"></script>
-        {% assets filters="closure_js", output="js/app.min.js",
+        {% assets filters="rjsmin", output="js/app.min.js",
             "js/libs/jquery-1.8.2.min.js",
             "js/libs/spin.min.js",
             "js/libs/jquery.spin.js",
