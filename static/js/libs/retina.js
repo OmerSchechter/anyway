@@ -54,6 +54,7 @@
                     retinaImages.push(new RetinaImage(image));
                 }
             }
+            console.log(retinaImages);
             existing_onload();
         };
     };
@@ -175,8 +176,11 @@
         load();
     };
 
-
-    if (Retina.isRetina()) {
-        Retina.init(root);
+    function mainRetina(){
+        if (Retina.isRetina()) {
+            Retina.init(root);
+        }
     }
+    mainRetina();
+    window.mainRetina = mainRetina;
 })();
