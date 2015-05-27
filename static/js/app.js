@@ -436,8 +436,9 @@ $(function () {
             this.isReady = true;
             google.maps.event.addListener( this.map, "rightclick", _.bind(this.contextMenuMap, this) );
             google.maps.event.addListener( this.map, "idle", _.bind(this.fetchMarkers, this) );
-
-            return this;
+            google.maps.event.addListener( this.clusterer, 'mouseover', function(cluster){
+                console.log(cluster);
+            } );
         },
         goToMyLocation: function () {
             if (typeof this.myLocation !== 'undefined') {
