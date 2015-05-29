@@ -383,8 +383,8 @@
             "js/clipboard.js",
             "js/libs/bootstrap-tour.min.js",
             "js/app.js",
-            "js/localization.js",
-            "js/libs/jquery.smartbanner.js" %}
+            "js/localization.js"
+             %}
             <script type="text/javascript" src="{{ ASSET_URL }}"></script>
         {% endassets %}
 
@@ -507,7 +507,8 @@
         </script>
 	
     <script type="text/javascript" src="../static/js/tour.js"> </script>
-    <script type="text/javascript"> $().smartbanner(); </script>
+    <script src="static/js/libs/jquery.smartbanner.js"></script>
+    <script type="text/javascript"> $.smartbanner(); </script>
     </body>
 	
 	
