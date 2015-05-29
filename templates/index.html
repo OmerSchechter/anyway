@@ -18,11 +18,11 @@
         <link href="{{ url }}static/img/icon.png" rel="icon" />
         <link href='http://fonts.googleapis.com/css?family=Alef:400,700' rel='stylesheet' type='text/css'>
         {% assets filters="yui_css", output="css/app.min.css",
+            "css/jquery.smartbanner.css",
             "css/bootstrap.rtl.css",
             "css/style.css",
             "css/daterangepicker.css",
-	        "css/bootstrap-tour.min.css",
-            "css/jquery.smartbanner.css"	 %}
+	        "css/bootstrap-tour.min.css"	 %}
             <link rel="stylesheet" href="{{ ASSET_URL }}" />
         {% endassets %}
     </head>
@@ -508,7 +508,10 @@
 	
     <script type="text/javascript" src="../static/js/tour.js"> </script>
     <script src="static/js/libs/jquery.smartbanner.js"></script>
-    <script type="text/javascript"> $.smartbanner(); </script>
+    <script type="text/javascript"> $.smartbanner({
+        author: '"Hasadna"',
+        icon: 'static/img/logo.png'
+    }); </script>
     </body>
 	
 	
