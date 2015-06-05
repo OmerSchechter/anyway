@@ -25,6 +25,7 @@ $(function () {
         url: "/markers",
 
         parse: function (response, options) {
+            console.log(response);
             return response.markers;
         }
     });
