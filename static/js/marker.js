@@ -188,7 +188,7 @@ var MarkerView = Backbone.View.extend({
     opacitySeverityForGroup : function() {
         var group = this.model.get("groupID") -1;
         if (isRetina){
-            this.marker.icon = { url: MULTIPLE_ICONS[app.groupsData[group].severity], scaledSize: new google.maps.Size(30, 52) };
+            this.marker.icon = { url: MULTIPLE_ICONS[app.groupsData[group].severity], scaledSize: new google.maps.Size(30, 50) };
         } else {
             this.marker.icon = MULTIPLE_ICONS[app.groupsData[group].severity];
         }

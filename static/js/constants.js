@@ -100,7 +100,7 @@ function getIcon(accidentType, severity) {
     if (isRetina){
         var googleIcon = {
             url: icon,
-            scaledSize: new google.maps.Size(30, 52)
+            scaledSize: new google.maps.Size(30, 50)
         };
         icon = googleIcon;
     }
