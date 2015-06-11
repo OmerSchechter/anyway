@@ -26,7 +26,11 @@ var MarkerView = Backbone.View.extend({
         });
 
         if (this.model.get("type") == MARKER_TYPE_DISCUSSION) {
-            this.marker.setIcon(DISCUSSION_ICON);
+            if (isRetina){
+                this.marker.setIcon({url: DISCUSSION_ICON, scaledSize: new google.maps.Size(30, 50)});
+            } else {
+                this.marker.setIcon(DISCUSSION_ICON);
+            }
             this.marker.setTitle("דיון"); //this.model.get("title"));
             this.marker.setMap(this.map);
             this.marker.view = this;
