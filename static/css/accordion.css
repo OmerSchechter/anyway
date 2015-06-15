@@ -1,0 +1,104 @@
+.accordion-container{
+	width: 300px;
+	margin: 10px 2px 30px 0px;
+}
+
+.accordion-container label{
+	width: initial !important;
+	display: block !important;
+	font-family: 'Alef','sans-serif';
+	padding: 0px 10px;
+	position: relative;
+	z-index: 20;
+	display: block;
+	height: 30px;
+	cursor: pointer;
+	color: #777;
+	text-shadow: 1px 1px 1px rgba(255,255,255,0.8);
+	line-height: 28px;
+	font-size: 15px;
+	background: -webkit-linear-gradient(top, #ffffff 1%,#eaeaea 100%);
+	background: linear-gradient(top, #ffffff 1%,#eaeaea 100%);
+	box-shadow: 
+		0px 0px 0px 1px rgba(155,155,155,0.3), 
+		1px 0px 0px 0px rgba(255,255,255,0.9) inset, 
+		0px 2px 2px rgba(0,0,0,0.1);
+}
+
+.accordion-container label:hover{
+	background: #fff;
+}
+
+.accordion-container input:checked + label,
+.accordion-container input:checked + label:hover{
+	background: #c6e1ec;
+	color: #3d7489;
+	text-shadow: 0px 1px 1px rgba(255,255,255, 0.6);
+	box-shadow: 
+		0px 0px 0px 1px rgba(155,155,155,0.3), 
+		0px 2px 2px rgba(0,0,0,0.1);
+}
+
+.accordion-container label:hover:after,
+.accordion-container input:checked + label:hover:after{
+	content: '';
+	position: absolute;
+	width: 24px;
+	height: 24px;
+	/*right: 13px;*/
+	left: 13px;
+	top: 4px;
+	background: transparent url("../img/icons/arrow_down.png") no-repeat center center;/*transparent*/
+}
+
+.accordion-container input:checked + label:hover:after{
+	background-image: url(../img/arrow_up.png);
+}
+
+.accordion-container input{
+	display: none;
+}
+
+.accordion-container article{
+	background: rgba(255, 255, 255, 0.5);
+	margin-top: -1px;
+	overflow: hidden;
+	height: 0px;
+	position: relative;
+	z-index: 10;
+	transition: 
+		height 0.1s ease-in-out, 
+		box-shadow 0.6s linear;/*0.3*/
+}
+.accordion-container input:checked ~ article{
+	transition: 
+		height 0.2s ease-in-out, 
+		box-shadow 0.1s linear;/*0.5*/
+	box-shadow: 0px 0px 0px 1px rgba(155,155,155,0.3);
+}
+
+.accordion-container article p{
+	font-style: italic;
+	color: #777;
+	/*line-height: 23px;*/
+	font-size: 14px;
+	/*padding: 20px;*/
+	padding: 2px 6px 0px 6px;
+	text-shadow: 1px 1px 1px rgba(255,255,255,0.8);
+}
+
+.accordion-container input:checked ~ article.ac-small{
+	height: 140px;
+}
+.accordion-container input:checked ~ article.ac-medium{
+	height: 180px;
+}
+.accordion-container input:checked ~ article.ac-large{
+	height: 230px;
+}
+.accordion-container input:checked ~ article.ac-general{
+	height: 100px;
+}
+
+
+/*auto*/
