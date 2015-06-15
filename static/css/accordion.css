@@ -67,7 +67,7 @@
 	position: relative;
 	z-index: 10;
 	transition: 
-		height 0.1s ease-in-out, 
+		height 0.2s ease-in-out, 
 		box-shadow 0.6s linear;/*0.3*/
 }
 .accordion-container input:checked ~ article{
