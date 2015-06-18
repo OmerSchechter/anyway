@@ -48,7 +48,7 @@
 	/*right: 13px;*/
 	left: 13px;
 	top: 4px;
-	background: transparent url("../img/icons/arrow_down.png") no-repeat center center;/*transparent*/
+	background: transparent url("../img/arrow_down.png") no-repeat center center;/*transparent*/
 }
 
 .accordion-container input:checked + label:hover:after{
@@ -98,6 +98,11 @@
 }
 .accordion-container input:checked ~ article.ac-general{
 	height: 100px;
+}
+
+.fontIcon{
+	vertical-align: middle;
+  	margin-left: 10px;
 }
 
 
