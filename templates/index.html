@@ -274,66 +274,39 @@
             
         </div> -->
 
+        <!-- 
+            
+        
+         -->
+
 
         <!-- Created by OmerSchechter: Adding 'Accordion' to the Info Window -->
         <div id="marker-content-template" style="display: none">
-            <div style="overflow-y: auto; height: 400px;">
+            <div class="marker-info-window" style="overflow-y: auto; height: 360px;">
                 <img class="profile-image" style="float: left" />
                 <h4 class="title"></h4>
                 <p class="added-by"></p>
                 <p class="creation-date"></p>
-                <p class="roadType" style="margin:0"></p>
-                <p class="accidentType" style="margin:0"></p>
-                <p class="roadShape" style="margin:0"></p>
-                <p class="severityText" style="margin:0"></p>
-                <p class="dayType" style="margin:0"></p>
-                <p class="igun" style="margin:0"></p>
-                <p class="unit" style="margin:0"></p>
-                <p class="one_lane" style="margin:0"></p>
-                <p class="multi_lane" style="margin:0"></p>
-                <p class="speed_limit" style="margin:0"></p>
-                <p class="mainStreet" style="margin:0"></p>
 
                 <section class="accordion-container">
                     <div>
-                        <input id="ac-1" name="accordion-1" type="checkbox" onchange="infoWindowCheckScroll(this);" />
+                        <input id="ac-1" name="accordion-1" type="checkbox" />
                         <label for="ac-1"><i class="icon-warning-sign fontIcon"></i>פרטי התאונה</label>
                         <article class="ac-general">
-                            <p class="cross_location" style="margin:0"></p>
-                            <p class="cross_direction" style="margin:0"></p>
-                            <p class="secondaryStreet" style="margin:0"></p>
-                            <p class="junction" style="margin:0"></p>
-                            <p class="dayType" style="margin:0"></p>
-                            <p class="igun" style="margin:0"></p>
-                            <p class="unit" style="margin:0"></p>
-                            <p class="one_lane" style="margin:0"></p>
-                            <p class="multi_lane" style="margin:0"></p>
-                            <p class="speed_limit" style="margin:0"></p>
+                            <p class="severityText" style="margin:0"></p>
+                            <p class="accidentType" style="margin:0"></p>
+                            <p class="road_object" style="margin:0"></p>
+                            <p class="object_distance" style="margin:0"></p>
+                            <p class="didnt_cross" style="margin:0"></p>
+                            <p class="cross_mode" style="margin:0"></p>
                         </article>
                     </div>
                     <div>
                         <input id="ac-2" name="accordion-1" type="checkbox" />
-                        <label for="ac-2"><i class="icon-road fontIcon"></i>פרטי הדרך</label>
+                        <label for="ac-2"><i class="icon-road fontIcon"></i>תנאי הדרך</label>
                         <article class="ac-general">
-                            <p class="cross_location" style="margin:0"></p>
-                            <p class="cross_direction" style="margin:0"></p>
-                            <p class="secondaryStreet" style="margin:0"></p>
-                            <p class="junction" style="margin:0"></p>
-                            <p class="dayType" style="margin:0"></p>
-                            <p class="igun" style="margin:0"></p>
-                            <p class="unit" style="margin:0"></p>
-                            <p class="one_lane" style="margin:0"></p>
-                            <p class="multi_lane" style="margin:0"></p>
-                            <p class="speed_limit" style="margin:0"></p>
-                        </article>
-                    </div>
-                    <div>
-                        <input id="ac-3" name="accordion-1" type="checkbox" />
-                        <label for="ac-3"><i class="icon-list-alt fontIcon"></i>פרטים נוספים</label>
-                        <article class="ac-general">
-                            <p class="dayType" style="margin:0"></p>
-                            <p class="igun" style="margin:0"></p>
-                            <p class="unit" style="margin:0"></p>
+                            <p class="roadType" style="margin:0"></p>
+                            <p class="roadShape" style="margin:0"></p>
                             <p class="one_lane" style="margin:0"></p>
                             <p class="multi_lane" style="margin:0"></p>
                             <p class="speed_limit" style="margin:0"></p>
@@ -344,19 +317,46 @@
                             <p class="road_control" style="margin:0"></p>
                             <p class="weather" style="margin:0"></p>
                             <p class="road_surface" style="margin:0"></p>
-                            <p class="road_object" style="margin:0"></p>
-                            <p class="weather" style="margin:0"></p>
-                            <p class="road_surface" style="margin:0"></p>
-                            <p class="road_object" style="margin:0"></p>
-                            <p class="object_distance" style="margin:0"></p>
-                            <p class="didnt_cross" style="margin:0"></p>
-                            <p class="cross_mode" style="margin:0"></p>
+                            <p class="cross_location" style="margin:0"></p>
+                            <p class="cross_direction" style="margin:0"></p>
                         </article>
                     </div>
-                    <div><!--...--></div>
+                    <div>
+                        <input id="ac-3" name="accordion-1" type="checkbox" />
+                        <label for="ac-3"><i class="icon-list-alt fontIcon"></i>מיקום וזמן</label>
+                        <article class="ac-general">
+                            <p class="dayType" style="margin:0"></p>
+                            <p class="mainStreet" style="margin:0"></p>
+                            <p class="secondaryStreet" style="margin:0"></p>
+                            <p class="junction" style="margin:0"></p>
+                        </article>
+                    </div>
+                    <div>
+                        <input id="ac-4" name="accordion-1" type="checkbox" />
+                        <label for="ac-4"><i class="icon-warning-sign fontIcon"></i>מידע נוסף</label>
+                        <article class="ac-general">
+                            <p class="igun" style="margin:0"></p>
+                            <p class="unit" style="margin:0"></p>
+                        </article>
+                    </div>
+                    <div>
+                        <input id="ac-5" name="accordion-1" type="checkbox" />
+                        <label for="ac-5"><i class="icon-warning-sign fontIcon"></i>נפגעים</label>
+                        <article class="ac-general">
+                            
+                        </article>
+                    </div>
+                    <div>
+                        <input id="ac-6" name="accordion-1" type="checkbox" />
+                        <label for="ac-6"><i class="icon-warning-sign fontIcon"></i>רכבים מעורבים</label>
+                        <article class="ac-general">
+
+                        </article>
+                    </div>
                 </section>
             </div>
          </div>
+
 
          <div style="position: absolute; top: 100px; left: 200px; width: 700px; height: 400px; background: #333; z-index: 10000; display: none;">
                 <section class="accordion-container">

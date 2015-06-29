@@ -1,6 +1,6 @@
 .accordion-container{
 	width: 300px;
-	margin: 10px 2px 30px 0px;
+	margin: 30px 2px 30px 0px;
 }
 
 .accordion-container label{
@@ -63,25 +63,28 @@
 	background: rgba(255, 255, 255, 0.5);
 	margin-top: -1px;
 	overflow: hidden;
-	height: 0px;
+	max-height: 0px;
+	/*height: 0%;*/
 	position: relative;
 	z-index: 10;
 	transition: 
+		max-height 0.4s ease-out, 
 		height 0.1s ease-in-out, 
 		box-shadow 0.6s linear;/*0.3*/
 }
 .accordion-container input:checked ~ article{
 	transition: 
+		max-height 0.5s ease-in, 
 		height 0.2s ease-in-out, 
 		box-shadow 0.1s linear;/*0.5*/
 	box-shadow: 0px 0px 0px 1px rgba(155,155,155,0.3);
 }
 
 .accordion-container article p{
-	font-style: italic;
-	color: #777;
+	/*font-style: italic;*/
+	color: #222;
 	/*line-height: 23px;*/
-	font-size: 14px;
+	font-size: 13px;
 	/*padding: 20px;*/
 	padding: 2px 6px 0px 6px;
 	text-shadow: 1px 1px 1px rgba(255,255,255,0.8);
@@ -97,8 +100,12 @@
 	height: 230px;
 }
 .accordion-container input:checked ~ article.ac-general{
-	height: 100px;
+	max-height: 400px;
+	/*height: 100%;*/
 }
+
+
+
 
 .fontIcon{
 	vertical-align: middle;
